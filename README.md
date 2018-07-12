@@ -2,7 +2,7 @@
 
 We just learned about using `RSpec` test doubles to facilitate setting up your tests. But sometimes using a `double` is not enough. There are times in our tests where we want to use actual objects from our application.
 
-As an application grows, a common problem with creating application objects on the fly is that they become complex. A `User` object may require a password, a territory, a role, etc. And these requirements typically have model validations that ensure these are present. Which means we can not leave them out everytime we create a `User` instance.
+As an application grows, a common problem with creating application objects on the fly is that they become complex. A `User` object may require a password, a territory, a role, etc. And these requirements typically have model validations that ensure these are present. Which means we can not leave them out every time we create a `User` instance.
 
 When a `user_spec` checks an isolated unit of functionality, like assigning a `user`'s TShirt size for example, then adding these necessary fields to your `User` object becomes a chore. It is also a distraction from the intent of the test. A test that is designed to assert behavior around TShirt size should not have anything to do with a `user`'s role or password.
 
@@ -151,7 +151,7 @@ FactoryBot.define do
 end
 ```
 
-If we wanted our `User` factory to have a different `territory` name than what is specified in our territory factory, we could pass the attribute a block. The example below is a blueprint for a `user` from Atlanta.
+If we wanted our `User` factory to have a different `territory` name then what is specified in our territory factory, we could pass the attribute a block. The example below is a blueprint for a `user` from Atlanta.
 
 ```ruby
 FactoryBot.define do
